@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Dashboard</title>
+  <style>
+  
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white; 
+  color: #2e7d32;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff; 
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e0f2f1;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.logout-btn:hover {
+  color: #a5d6a7;
+  font-weight: bold;
+}
+
+/* Dashboard Main Content */
+.dashboard {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.dashboard h1 {
+  color: black;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #e8f5e9; 
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: black;
+}
+
+.card p {
+  color: black;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #388e3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+}
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">DRIVER DASHBOARD</a>
+      <ul class="nav-links">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="bus_info.html">Post Bus Information</a></li>
+        <li><a href="bus_type.html">Post Bus Type</a></li>
+		<li><a href="contact.html">Post Contact</a></li>
+        <li><a href="alogin.html" class="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="dashboard">
+    <h1>Welcome,Driver  Dashboard</h1>
+    <div class="card-container">
+      <div class="card">
+        <h3>Post Bus Information </h3>
+        <p>Add Bus Information. </p>
+        <a href="bus_info.html" class="btn">Go</a>
+      </div>
+      <div class="card">
+        <h3>Post Bus Type</h3>
+        <p>Add Bus Type.</p>
+        <a href="bus_type.html" class="btn">Go</a>
+      </div>
+	  <div class="card">
+        <h3>Post Contact</h3>
+        <p>Add Contact.</p>
+        <a href="contact.html" class="btn">Go</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

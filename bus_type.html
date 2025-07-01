@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Bus Type</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+	<nav class="navbar">
+    <div class="container1">
+      <h1 class="logo">E-Bus System</h1>
+      <ul class="nav-links">
+        <li><a href="driverdashboard.html">Dashboard</a></li>
+        <li><a href="alogin.html">logout</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container">
+        <h2>Post Bus Type Information</h2>
+        <form action="submit_bus_type.php" method="POST">
+            <div class="form-group">
+                <label>Bus Name:</label>
+                <input type="text" name="bus_name" placeholder="e.g., Volvo Elite" required>
+            </div>
+
+            <div class="form-group">
+                <label>Bus Type:</label>
+                <select name="bus_type" required>
+                    <option value="">-- Select Type --</option>
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                    <option value="Sleeper">Sleeper</option>
+                    <option value="Semi-Sleeper">Semi-Sleeper</option>
+                    <option value="Seater">Seater</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Electric">Electric</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea name="description" placeholder="Short description about this bus type..." rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Post Bus Type</button>
+        </form>
+    </div>
+</body>
+</html>
